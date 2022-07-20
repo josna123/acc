@@ -45,13 +45,15 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
             $row = mysqli_fetch_assoc($result);
 
             if ($row['name'] === $uname && $row['password'] === $pass) {
-
-                echo "Logged in!";
-
                 $_SESSION['name'] = $row['name'];
-                
+                $_SESSION['contact_number'] = $row['contact_number'];
+                $_SESSION['blood_group'] = $row['blood_group'];
+                $_SESSION['email'] = $row['email'];
+                $_SESSION['address'] = $row['address'];
+                $_SESSION['emergency_contact_number'] = $row['emergency_contact_number'];
+                $_SESSION['emergency_contact_name'] = $row['emergency_contact_name'];
 
-                header("Location: index.html");
+                header("Location: driverhome.php");
 
                 exit();
 
@@ -70,11 +72,5 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
         }
 
     }
-
-}else{
-
-    echo "not";
-
-    exit();
 
 }
