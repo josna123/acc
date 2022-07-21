@@ -21,7 +21,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
     $uname = validate($_POST['uname']);
 
     $pass = validate($_POST['password']);
-
+    $pass=md5($pass);
     if (empty($uname)) {
 
         header("Location: index.php?error=User Id is required");
@@ -50,9 +50,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 
                 $_SESSION['station_name'] = $row['station_name'];
 
-                $_SESSION['id'] = $row['id'];
-
-                header("Location: index.html");
+                header("Location: policehome.php");
 
                 exit();
 

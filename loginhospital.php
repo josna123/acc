@@ -21,7 +21,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
     $uname = validate($_POST['uname']);
 
     $pass = validate($_POST['password']);
-
+    $pass=md5($pass);
     if (empty($uname)) {
 
         header("Location: index.php?error=User Id is required");
@@ -36,7 +36,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 
     }else{
 
-        $sql = "SELECT * FROM hospital_list WHERE userid='$uname' AND pwd='$pass'";
+        $sql = "SELECT * FROM hospital_list WHERE hospital_name='$uname' AND password='$pass'";
 
         $result = mysqli_query($conn, $sql);
 
@@ -44,15 +44,13 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 
             $row = mysqli_fetch_assoc($result);
 
-            if ($row['userid'] === $uname && $row['pwd'] === $pass) {
+            if ($row['hospital_name'] === $uname && $row['password'] === $pass) {
 
                 echo "Logged in!";
 
-                $_SESSION['userid'] = $row['userid'];
+                $_SESSION['hospital_name'] = $row['hospital_name'];
 
-                $_SESSION['id'] = $row['id'];
-
-                header("Location: index.html");
+                header("Location: hospitalhome.php");
 
                 exit();
 
@@ -71,11 +69,5 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
         }
 
     }
-
-}else{
-
-    echo "not";
-
-    exit();
 
 }

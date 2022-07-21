@@ -21,6 +21,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
     $uname = validate($_POST['uname']);
 
     $pass = validate($_POST['password']);
+    $pass=md5($pass);
 
     if (empty($uname)) {
 
@@ -37,7 +38,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
     }else{
 
         $sql = "SELECT * FROM drivers_list WHERE name='$uname' AND password='$pass'";
-
+        
         $result = mysqli_query($conn, $sql);
 
         if (mysqli_num_rows($result) === 1) {
