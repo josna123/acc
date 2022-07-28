@@ -19,7 +19,7 @@ a {
 }
 
 a:hover {
-  color: #34e5a6;
+  color: #cc57ea;
   text-decoration: none;
 }
 
@@ -393,7 +393,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #ff63ce;
 }
 #hero .btn-get-started:hover {
-  background: #17b57d;
+  background: #ff1d8aca;
 }
 #hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
@@ -1188,7 +1188,7 @@ section {
   position: absolute;
   right: 0;
   left: 20px;
-  color: #34e5a6;
+  color: #cc57ea;
 }
 .faq .faq-list .icon-show, .faq .faq-list .icon-close {
   font-size: 24px;
@@ -1325,7 +1325,7 @@ section {
   border-radius: 50px;
 }
 .contact .php-email-form button[type=submit]:hover {
-  background: #34e5a6;
+  background: #cc57ea;
 }
 @-webkit-keyframes animate-loading {
   0% {

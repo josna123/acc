@@ -6,7 +6,7 @@ $uname= "root";
 
 $password = "";
 
-$db_name = "accident";
+$db_name = "accident_system";
 
 $conn = mysqli_connect($sname, $uname, $password, $db_name);
 

@@ -32,7 +32,7 @@ if (isset($_GET['logout'])) {
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Bootslander Bootstrap Template - Index</title>
+  <title>Accident Detection and Alert System - Police</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 

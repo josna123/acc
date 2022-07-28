@@ -51,9 +51,9 @@ require('regscriptdriver.php');
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About Us</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html">About Us</a></li>
+          <li><a class="nav-link scrollto" href="index.html">Contact Us</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -135,9 +135,8 @@ require('regscriptdriver.php');
         <div class="form-group">
             <label for="email">Blood group</label>
                 <input type="text" class="form-control" placeholder="Enter blood group" name="blood_group" value="<?php echo $set_bloodgroup;?>">
-                <p class="err-msg">
-                    <?php if($nameErr!=1){ echo $nameErr; } ?>
-                </p>
+                
+                <br>
         </div>
         <div class="text-center"><button type="submit" name="submit" style="background: #ff63ce;
                                 border: 0;

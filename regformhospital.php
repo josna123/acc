@@ -6,7 +6,7 @@ require('regscripthospital.php');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Driver Registration Form</title>
+  <title>Hospital Registration Form</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -51,9 +51,9 @@ require('regscripthospital.php');
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About Us</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html">About Us</a></li>
+          <li><a class="nav-link scrollto" href="index.html">Contact Us</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
